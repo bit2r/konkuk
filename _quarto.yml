@@ -32,6 +32,8 @@ website:
         menu:
         - href: chatGPT_setup.qmd
           text: "1주차: 환경설정"
+        - href: chatGPT_chatGPT.qmd
+          text: "챗GPT(ChatGPT)"
         - href: chatGPT_setup_bash.qmd
           text: "배쉬(Bash)"
         - href: chatGPT_setup_sql.qmd

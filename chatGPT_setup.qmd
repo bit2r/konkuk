@@ -40,7 +40,9 @@ editor_options:
 
 # 챗GPT
 
-TO-DO
+- OpenAI [Playground](https://platform.openai.com/playground)
+- [챗GPT](https://chat.openai.com/)
+- [챗GPT API](https://platform.openai.com/docs/guides/gpt)
 
 # 개발도구
 
