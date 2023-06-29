@@ -1,0 +1,124 @@
+---
+title: "챗GPT 데이터 사이언스"
+subtitle: "1주차: 환경설정"
+description: |
+  챗GPT와 데이터 사이언스 환경을 설정합니다.
+author:
+  - name: 이광춘
+    url: https://www.linkedin.com/in/kwangchunlee/
+    affiliation: 한국 R 사용자회
+    affiliation-url: https://github.com/bit2r
+title-block-banner: true
+format:
+  html:
+    theme: flatly
+    code-fold: true
+    code-overflow: wrap
+    toc: true
+    toc-depth: 3
+    toc-title: 목차
+    number-sections: true
+    highlight-style: github    
+    self-contained: false
+    default-image-extension: jpg
+filters:
+   - lightbox
+lightbox: auto
+link-citations: true
+knitr:
+  opts_chunk: 
+    message: false
+    warning: false
+    collapse: true
+    echo: false
+    comment: "#>" 
+    R.options:
+      knitr.graphics.auto_pdf: true
+editor_options: 
+  chunk_output_type: console
+---
+
+# 챗GPT
+
+TO-DO
+
+# 개발도구
+
+## 통합개발환경
+
+- Visual Studio Code: <https://code.visualstudio.com/download>
+- RStudio: <https://posit.co/download/rstudio-desktop/>
+- Jupyter: <https://jupyter.org/install>
+
+## 버젼제어 
+
+- Git for Windows: <https://gitforwindows.org/>
+
+## 프로그래밍 언어
+
+- R: <https://cran.r-project.org/bin/windows/base/>
+- 파이썬: <https://www.python.org/downloads/>
+
+## 문서저작
+
+- Quarto: <https://quarto.org/docs/download/>
+
+## SQL
+
+- Sqlite3: <https://www.sqlite.org/index.html>
+- DuckDB: <https://duckdb.org/>
+- PostgreSQL: <https://www.postgresql.org/download/>
+
+## 딥러닝
+
+- 텐서플로우: <https://www.tensorflow.org/install>
+- 파이토치: <https://pytorch.org/>
+- Huggingface: <https://huggingface.co/>
+
+# 데이터
+
+- `BitData`: <https://r2bit.com/bitData/>
+- 캐글: <https://www.kaggle.com/>
+- 공공데이터 포털: <https://www.data.go.kr/>
+
+# 콘텐츠
+
+## 챗GPT
+
+- 챗GPT : <https://r2bit.com/chatGPT/>
+- 챗GPT 유닉스 쉘 : <https://github.com/bit2r/gpt-shell>
+
+
+## 전자책
+
+- `BitBook`: <https://r2bit.com/book>
+
+## 블로그
+
+- 데이터 과학: <https://statkclee.github.io/data-science/>
+- 시각화: <https://statkclee.github.io/viz/>
+- 문서제작: <http://statkclee.github.io/comp_document/>
+    - 쿼토(Quarto): <https://r2bit.com/quarto/>
+    - 파워포인트(PPT): <https://r2bit.com/bitSlide/>
+    - 웹슬라이드(Xaringan): <http://statkclee.github.io/ds-authoring/> 
+- 데이터 과학 제품: <http://statkclee.github.io/data-product/>
+- 딥러닝 기본기 : <https://statkclee.github.io/united-states/>
+- ...
+
+# 저작권과 라이선스
+
+- 공개 과학(Open Science): <http://statkclee.github.io/git-novice/10-open-kr.html>
+- 라이선스: <http://statkclee.github.io/git-novice/11-licensing-kr.html>
+
+# 클라우드
+
+- 클라우드 컴퓨팅 소개 - 유전체학(Genomics) : <http://statkclee.github.io/cloud-genomics-kr/>
+- `r-cloudlayer` : <https://github.com/statkclee/r-cloudlayer> (TO-DO)
+
+# 도커
+
+- 도커 데스크탑: <https://www.docker.com/>
+
+
+
+

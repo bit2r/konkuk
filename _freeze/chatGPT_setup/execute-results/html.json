@@ -1,0 +1,16 @@
+{
+  "hash": "4a54d5b66a7541339415e30d28207de7",
+  "result": {
+    "markdown": "---\ntitle: \"챗GPT 데이터 사이언스\"\nsubtitle: \"1주차: 환경설정\"\ndescription: |\n  챗GPT와 데이터 사이언스 환경을 설정합니다.\nauthor:\n  - name: 이광춘\n    url: https://www.linkedin.com/in/kwangchunlee/\n    affiliation: 한국 R 사용자회\n    affiliation-url: https://github.com/bit2r\ntitle-block-banner: true\nformat:\n  html:\n    theme: flatly\n    code-fold: true\n    code-overflow: wrap\n    toc: true\n    toc-depth: 3\n    toc-title: 목차\n    number-sections: true\n    highlight-style: github    \n    self-contained: false\n    default-image-extension: jpg\nfilters:\n   - lightbox\nlightbox: auto\nlink-citations: true\nknitr:\n  opts_chunk: \n    message: false\n    warning: false\n    collapse: true\n    echo: false\n    comment: \"#>\" \n    R.options:\n      knitr.graphics.auto_pdf: true\neditor_options: \n  chunk_output_type: console\n---\n\n\n# 챗GPT\n\nTO-DO\n\n# 개발도구\n\n## 통합개발환경\n\n- Visual Studio Code: <https://code.visualstudio.com/download>\n- RStudio: <https://posit.co/download/rstudio-desktop/>\n- Jupyter: <https://jupyter.org/install>\n\n## 버젼제어 \n\n- Git for Windows: <https://gitforwindows.org/>\n\n## 프로그래밍 언어\n\n- R: <https://cran.r-project.org/bin/windows/base/>\n- 파이썬: <https://www.python.org/downloads/>\n\n## 문서저작\n\n- Quarto: <https://quarto.org/docs/download/>\n\n## SQL\n\n- Sqlite3: <https://www.sqlite.org/index.html>\n- DuckDB: <https://duckdb.org/>\n- PostgreSQL: <https://www.postgresql.org/download/>\n\n## 딥러닝\n\n- 텐서플로우: <https://www.tensorflow.org/install>\n- 파이토치: <https://pytorch.org/>\n- Huggingface: <https://huggingface.co/>\n\n# 데이터\n\n- `BitData`: <https://r2bit.com/bitData/>\n- 캐글: <https://www.kaggle.com/>\n- 공공데이터 포털: <https://www.data.go.kr/>\n\n# 콘텐츠\n\n## 챗GPT\n\n- 챗GPT : <https://r2bit.com/chatGPT/>\n- 챗GPT 유닉스 쉘 : <https://github.com/bit2r/gpt-shell>\n\n\n## 전자책\n\n- `BitBook`: <https://r2bit.com/book>\n\n## 블로그\n\n- 데이터 과학: <https://statkclee.github.io/data-science/>\n- 시각화: <https://statkclee.github.io/viz/>\n- 문서제작: <http://statkclee.github.io/comp_document/>\n    - 쿼토(Quarto): <https://r2bit.com/quarto/>\n    - 파워포인트(PPT): <https://r2bit.com/bitSlide/>\n    - 웹슬라이드(Xaringan): <http://statkclee.github.io/ds-authoring/> \n- 데이터 과학 제품: <http://statkclee.github.io/data-product/>\n- 딥러닝 기본기 : <https://statkclee.github.io/united-states/>\n- ...\n\n# 저작권과 라이선스\n\n- 공개 과학(Open Science): <http://statkclee.github.io/git-novice/10-open-kr.html>\n- 라이선스: <http://statkclee.github.io/git-novice/11-licensing-kr.html>\n\n# 클라우드\n\n- 클라우드 컴퓨팅 소개 - 유전체학(Genomics) : <http://statkclee.github.io/cloud-genomics-kr/>\n- `r-cloudlayer` : <https://github.com/statkclee/r-cloudlayer> (TO-DO)\n\n# 도커\n\n- 도커 데스크탑: <https://www.docker.com/>\n\n\n\n\n",
+    "supporting": [
+      "chatGPT_setup_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

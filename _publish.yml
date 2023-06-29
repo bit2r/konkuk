@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: ca92776e-00ce-46b5-80f6-a411c6f9d769
+      url: 'https://statkclee.quarto.pub/konkuk'

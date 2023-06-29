@@ -32,6 +32,15 @@ website:
         menu:
         - href: chatGPT_setup.qmd
           text: "1주차: 환경설정"
+        - href: chatGPT_setup_bash.qmd
+          text: "배쉬(Bash)"
+        - href: chatGPT_setup_sql.qmd
+          text: "데이터베이스(SQL)"
+        - href: chatGPT_setup_python.qmd
+          text: "파이썬(Python)"
+        - href: chatGPT_setup_R.qmd
+          text: "R"
+        - text: "----------------"
 
     right:
       - icon: github
