@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "챗GPT 데이터 사이언스",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "챗GPT 데이터 사이언스\n  전문교육과정\n\n\n    \n\n강의주제\n      강의내용\n      수업방법\n    \n\n\n\n1 주차 - 2023-07-01\n    \n\n데이터 사이언스 언어\n챗GPT와 데이터 사이언스\n핸즈온 실습\n\n\n데이터 사이언스 언어\nTidyverse와 챗GPT\n핸즈온 실습\n\n\n데이터 사이언스 언어\n파이썬/R/SQL 그리고 API\n핸즈온 실습\n\n\n2 주차 - 2023-07-08\n    \n\n소프트웨어 카펜트리 (기본기)\n자동화: 유닉스 쉘\n핸즈온 실습\n\n\n소프트웨어 카펜트리 (기본기)\n버전제어: Git / GitHub\n핸즈온 실습\n\n\n3 주차 - 2023-07-15\n    \n\n소프트웨어 카펜트리 (기본기)\n파이썬 / R\n핸즈온 실습\n\n\n소프트웨어 카펜트리 (기본기)\n데이터베이스\n핸즈온 실습\n\n\n4 주차 - 2023-07-22\n    \n\n데이터 과학 자료구조\n숫자/범주 --&gt; 데이터프레임\n핸즈온 실습\n\n\n데이터 과학 자료구조\n날짜/공간정보/네트워크\n핸즈온 실습\n\n\n데이터 과학 자료구조\n텍스트/이미지/오디오\n핸즈온 실습\n\n\n5 주차 - 2023-07-29\n    \n\n디지털 글쓰기, 대쉬보드, API 개발\n디지털 보고서(PDF, HTML, PPT)\n핸즈온 실습\n\n\n디지털 글쓰기, 대쉬보드, API 개발\nServerless 대쉬보드, R/Python 대쉬보드\n핸즈온 실습\n\n\n디지털 글쓰기, 대쉬보드, API 개발\n기계학습 모형 API 배포\n핸즈온 실습\n\n\n- 주차 - 2023-08-05\n    \n\n휴가\n휴가\n-\n\n\n6 주차 - 2023-08-12\n    \n\n챗GPT와 오픈소스\n(오픈소스) 거대언어모형(LLM)\n핸즈온 실습\n\n\n챗GPT와 오픈소스\nWrite/Draw/Coding/Reasoning\n핸즈온 실습\n\n\n챗GPT와 오픈소스\nAI 시대 데이터 사이언스 제품개발 방법\n핸즈온 실습\n\n\n7 주차 - 2023-08-19\n    \n\nPrompt Engineering\n사용자 및 개발자를 위한 프롬프트 공학\n핸즈온 실습\n\n\nPrompt Engineering\nOpenAI API 기반 NLP 개발\n핸즈온 실습\n\n\nPrompt Engineering\nOPL(OpenAI, Pinecone, Langchain) 프레임워크\n핸즈온 실습\n\n\n8 주차 - 2023-08-26\n    \n\n챗GPT AI 앱 프로젝트\n오픈소스 LLM 기반 AI 데이터 분석 제품\n핸즈온 실습\n\n\n챗GPT AI 앱 프로젝트\n데이터 사이언스 AutoGPT\n핸즈온 실습\n\n\n챗GPT AI 앱 프로젝트\n챗GPT AI 프로젝트 발표\n핸즈온 실습"
   },
   {
     "objectID": "about.html",
@@ -12,5 +12,26 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html#커리큘럼",
+    "href": "index.html#커리큘럼",
+    "title": "챗GPT 데이터 사이언스",
+    "section": "",
+    "text": "챗GPT 데이터 사이언스\n  전문교육과정\n\n\n    \n\n강의주제\n      강의내용\n      수업방법\n    \n\n\n\n1 주차 - 2023-07-01\n    \n\n데이터 사이언스 언어\n챗GPT와 데이터 사이언스\n핸즈온 실습\n\n\n데이터 사이언스 언어\nTidyverse와 챗GPT\n핸즈온 실습\n\n\n데이터 사이언스 언어\n파이썬/R/SQL 그리고 API\n핸즈온 실습\n\n\n2 주차 - 2023-07-08\n    \n\n소프트웨어 카펜트리 (기본기)\n자동화: 유닉스 쉘\n핸즈온 실습\n\n\n소프트웨어 카펜트리 (기본기)\n버전제어: Git / GitHub\n핸즈온 실습\n\n\n3 주차 - 2023-07-15\n    \n\n소프트웨어 카펜트리 (기본기)\n파이썬 / R\n핸즈온 실습\n\n\n소프트웨어 카펜트리 (기본기)\n데이터베이스\n핸즈온 실습\n\n\n4 주차 - 2023-07-22\n    \n\n데이터 과학 자료구조\n숫자/범주 --&gt; 데이터프레임\n핸즈온 실습\n\n\n데이터 과학 자료구조\n날짜/공간정보/네트워크\n핸즈온 실습\n\n\n데이터 과학 자료구조\n텍스트/이미지/오디오\n핸즈온 실습\n\n\n5 주차 - 2023-07-29\n    \n\n디지털 글쓰기, 대쉬보드, API 개발\n디지털 보고서(PDF, HTML, PPT)\n핸즈온 실습\n\n\n디지털 글쓰기, 대쉬보드, API 개발\nServerless 대쉬보드, R/Python 대쉬보드\n핸즈온 실습\n\n\n디지털 글쓰기, 대쉬보드, API 개발\n기계학습 모형 API 배포\n핸즈온 실습\n\n\n- 주차 - 2023-08-05\n    \n\n휴가\n휴가\n-\n\n\n6 주차 - 2023-08-12\n    \n\n챗GPT와 오픈소스\n(오픈소스) 거대언어모형(LLM)\n핸즈온 실습\n\n\n챗GPT와 오픈소스\nWrite/Draw/Coding/Reasoning\n핸즈온 실습\n\n\n챗GPT와 오픈소스\nAI 시대 데이터 사이언스 제품개발 방법\n핸즈온 실습\n\n\n7 주차 - 2023-08-19\n    \n\nPrompt Engineering\n사용자 및 개발자를 위한 프롬프트 공학\n핸즈온 실습\n\n\nPrompt Engineering\nOpenAI API 기반 NLP 개발\n핸즈온 실습\n\n\nPrompt Engineering\nOPL(OpenAI, Pinecone, Langchain) 프레임워크\n핸즈온 실습\n\n\n8 주차 - 2023-08-26\n    \n\n챗GPT AI 앱 프로젝트\n오픈소스 LLM 기반 AI 데이터 분석 제품\n핸즈온 실습\n\n\n챗GPT AI 앱 프로젝트\n데이터 사이언스 AutoGPT\n핸즈온 실습\n\n\n챗GPT AI 앱 프로젝트\n챗GPT AI 프로젝트 발표\n핸즈온 실습"
+  },
+  {
+    "objectID": "index.html#국내외-수료증-예시",
+    "href": "index.html#국내외-수료증-예시",
+    "title": "챗GPT 데이터 사이언스",
+    "section": "\n2 국내외 수료증 (예시)",
+    "text": "2 국내외 수료증 (예시)\n\n\n\n\n국내 건국대 전문과정 수료증\n\n\n\n해외 소프트웨어 카펜트리 수료증"
+  },
+  {
+    "objectID": "index.html#참고-자료",
+    "href": "index.html#참고-자료",
+    "title": "챗GPT 데이터 사이언스",
+    "section": "\n3 참고 자료",
+    "text": "3 참고 자료\n\n데이터 사이언스\n\nGS 칼텍스 디지털 아카데미: https://r2bit.com/curriculum/\n\n연세대학교 데이터 과학: https://statkclee.github.io/yonsei/ https://statkclee.github.io/yonsei2/\n\n\n\n챗GPT\n\n챗GPT PPT: https://r2bit.com/bitSlide/\n\n챗GPT 디지털 글쓰기: https://r2bit.com/quarto/\n\n챗GPT 디지털 출판: https://r2bit.com/bitPublish/\n\n챗GPT 실습: https://r2bit.com/gpt-edu/\n\n챗GPT 자료: https://r2bit.com/chatGPT/\n\n\n\n커뮤니티\n\n공익법인 한국 R 사용자회: https://r2bit.com/\n\n서울 R 미트업: https://r2bit.com/seoul-r/\n\n한국 R 컨퍼런스: https://use-r.kr/"
   }
 ]
