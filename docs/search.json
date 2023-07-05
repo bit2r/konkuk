@@ -403,6 +403,6 @@
     "href": "markdown.html#표-table",
     "title": "챗GPT 데이터 사이언스",
     "section": "\n3.3 표 (Table)",
-    "text": "3.3 표 (Table)"
+    "text": "3.3 표 (Table)\n\n3.3.1 IAEA PDF\nIAEA Fukushima Daiichi ALPS Treated Water Discharge - Comprehensive Report 최종 보고서에 담긴 표를 추출하자.\n\n\n\n\n\n\n\n\n\n3.3.2 PDF 표\n\n\n\n\n\n\n\n\nCOMPARISON OF TEPCO’S DETECTION LIMITS WITH RESPECTIVE JAPANESE\nREGULATORY LIMITS FOR DISCHARGE\n    \n\natom\n      regulatory_limit\n      detection_limit\n      DL_RL\n    \n\n\n\n3H\n60,000\n210.000\n0.35000\n\n\n14C\n2,000\n1.600\n0.08000\n\n\n54Mn\n1,000\n0.047\n0.00470\n\n\n55Fe\n2,000\n19.000\n0.94000\n\n\n60Co\n200\n0.028\n0.01400\n\n\n63Ni\n6,000\n8.100\n0.13000\n\n\n79Se\n200\n0.850\n0.43000\n\n\n90Sr\n30\n0.069\n0.23000\n\n\n99Tc\n1,000\n0.430\n0.04300\n\n\n106Ru\n100\n0.420\n0.41000\n\n\n125Sb\n800\n0.100\n0.01300\n\n\n129I\n9\n0.026\n0.29000\n\n\n134Cs\n60\n0.057\n0.10000\n\n\n137Cs\n90\n0.036\n0.04000\n\n\n144Ce\n200\n0.590\n0.30000\n\n\n147Pm\n3,000\n0.320\n0.01100\n\n\n151Sm\n8,000\n0.012\n0.00015\n\n\n154Eu\n400\n0.072\n0.01800\n\n\n155Eu\n3,000\n0.190\n0.00630\n\n\n234U\n20\n0.031\n0.15000\n\n\n238U\n20\n0.031\n0.15000\n\n\n237Np\n9\n0.031\n0.34000\n\n\n238Pu\n4\n0.031\n0.76000\n\n\n239Pu\n4\n0.031\n0.76000\n\n\n240Pu\n4\n0.031\n0.76000\n\n\n241Pu\n200\n0.840\n0.42000\n\n\n241Am\n5\n0.031\n0.61000\n\n\n244Cm\n7\n0.031\n0.44000"
   }
 ]

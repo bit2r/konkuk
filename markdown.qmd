@@ -210,4 +210,56 @@ $$\int _ { - \infty } ^ { \infty } e ^ { - x ^ { 2 } } d x = \sqrt { \pi }$$
 
 ## 표 (Table)
 
+### IAEA PDF
+
+IAEA [Fukushima Daiichi ALPS Treated Water Discharge - Comprehensive Report](https://www.iaea.org/topics/response/fukushima-daiichi-alps-treated-water-discharge-comprehensive-reports) 최종 보고서에 담긴 표를 추출하자.
+
+``` {r}
+#| label: iaea-report
+#| out.height: "460px"
+#| out.width: '800px'
+
+knitr::include_graphics("data/iaea_comprehensive_alps_report.pdf")
+```
+
+### PDF 표
+
+
+```{python}
+# ! pip install tabula-py
+# ! pip install camelot-py[cv]
+
+import tabula
+import camelot
+
+iaea_file = "data/iaea_comprehensive_alps_report.pdf"
+
+iaea_table = tabula.read_pdf(iaea_file, pages='99')
+# iaea_table = camelot.read_pdf(iaea_file, pages='89')
+
+# iaea_table
+```
+
+
+```{r}
+library(reticulate)
+library(tidyverse)
+library(gtExtras)
+
+py$iaea_table %>% 
+  .[[1]] %>% 
+  janitor::clean_names(ascii=FALSE) %>% 
+  slice(2:n()) %>% 
+  as_tibble() %>% 
+  set_names(c("atom", "regulatory_limit", "x1", "x2", "detection_limit", "DL_RL")) %>% 
+  select(!starts_with("x")) %>% 
+  mutate(atom = map_chr(atom, 1)) %>% 
+  mutate(regulatory_limit = as.integer(regulatory_limit)) %>% 
+  gt::gt() %>% 
+    gt::fmt_number(regulatory_limit, decimals = 0) %>% 
+    gt_theme_nytimes() %>% 
+    gt::tab_header(title = "COMPARISON OF TEPCO’S DETECTION LIMITS WITH RESPECTIVE JAPANESE
+REGULATORY LIMITS FOR DISCHARGE")
+```
+
 
