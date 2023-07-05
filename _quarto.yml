@@ -33,16 +33,18 @@ website:
         - href: chatGPT_setup.qmd
           text: "1주차: 환경설정"
         - href: chatGPT_chatGPT.qmd
-          text: "챗GPT(ChatGPT)"
+          text: "ㄴ 챗GPT(ChatGPT)"
         - href: chatGPT_setup_bash.qmd
-          text: "배쉬(Bash)"
+          text: "ㄴ 배쉬(Bash)"
         - href: chatGPT_setup_sql.qmd
-          text: "데이터베이스(SQL)"
+          text: "ㄴ 데이터베이스(SQL)"
         - href: chatGPT_setup_python.qmd
-          text: "파이썬(Python)"
+          text: "ㄴ 파이썬(Python)"
         - href: chatGPT_setup_R.qmd
-          text: "R"
+          text: "ㄴ R"
         - text: "----------------"
+        - href: markdown.qmd
+          text: "2주차: 마크다운"
 
     right:
       - icon: github

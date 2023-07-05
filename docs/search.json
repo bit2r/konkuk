@@ -376,5 +376,33 @@
     "title": "챗GPT 데이터 사이언스",
     "section": "각주",
     "text": "각주\n\nhttps://openai.com/api/↩︎\nhttps://platform.openai.com/account/api-keys↩︎"
+  },
+  {
+    "objectID": "markdown.html",
+    "href": "markdown.html",
+    "title": "챗GPT 데이터 사이언스",
+    "section": "",
+    "text": "1 기계판독\n\n2 마크다운 글쓰기\n\n\n마크다운 코드\n\n컴파일 명령어\n실행결과\n\n\n\n# 제목 1\n## 제목 2\n### 제목 3\n#### 제목 4\n##### 제목 5\n###### 제목 6\n\n**굵은 글씨** 또는 __굵은 글씨__\n\n*이탤릭체* 또는 _이탤릭체_\n\n~~취소선~~\n\n***굵은 이탤릭체*** 또는 ___굵은 이탤릭체___\n\n- 또는 * 또는 + 를 사용하여 목록을 만들 수 있습니다.\n  - 들여쓰기를 사용하여 중첩된 목록을 만들 수 있습니다.\n  \n1. 숫자와 점을 사용하여 순서 있는 목록을 만들 수 있습니다.\n2. 순서는 자동으로 증가합니다.\n\n[한국 R 사용자회](http://r2bit.com)\n\n![한국 R 사용자회 로고](images/koRea_logo.png)\n\n&gt; 인용구를 사용하여 텍스트를 강조할 수 있습니다.\n\n\\`단일 역 따옴표\\`를 사용하여 `인라인 코드`를 만들 수 있습니다.\n\n\\`\\`\\`\n여러 줄의 코드 블록을 만들 수 있습니다.\n빈 줄 없이 세 개의 역 따옴표를 사용하십시오.\n\\`\\`\\`\n\n표는 다음과 같이 만들 수 있습니다:\n\n| 항목      | 가격  | 수량  |\n| --------- | -----:| -----:|\n| 컴퓨터   | \\$1600 |   5   |\n| 전화기    |   \\$12 |  12   |\n| 파이프    |    \\$1 | 234   |\n\n마크다운은 매우 유연하므로 여러분이 원하는 방식으로 조정하고 사용할 수 있습니다.\n\n\n\n\n\n$ pandoc writing.md -o writing.html"
+  },
+  {
+    "objectID": "markdown.html#문서",
+    "href": "markdown.html#문서",
+    "title": "챗GPT 데이터 사이언스",
+    "section": "\n3.1 문서",
+    "text": "3.1 문서\nAI Hub - 공공행정문서 OCR 웹사이트에서 공공행정문서 데이터를 바탕으로 OCR 작업을 수행한다.\n\n\n스캔 문서\nOCR 된 텍스트\n네이버 OCR\n\n\n\n\n\n\n\nAI Hub - 공공행정문서 OCR\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n네이버 CLOVA OCR\n\n\n\n\n3.1.1 실습 문서\n\n\n\n\n텍스트\n\n\n\n표"
+  },
+  {
+    "objectID": "markdown.html#수식",
+    "href": "markdown.html#수식",
+    "title": "챗GPT 데이터 사이언스",
+    "section": "\n3.2 수식",
+    "text": "3.2 수식\n챗GPT가 선정한 수학에서 가장 유명한 3대 수식\n\n\n\n오일러 항등식(Euler’s Identity): \\(e^{i\\pi} + 1 = 0\\)\n\n피타고라스 정리(The Pythagorean Theorem): \\(a^2 + b^2 = c^2\\)\n\n가우스 적분(The Gaussian Integral): \\(\\int_{-\\infty}^{\\infty} e^{-x^2} \\, dx = \\sqrt{\\pi}\\)\n\n\n\n\n\n\n\n\n\nMathPix https://snip.mathpix.com/ 웹사이트를 통해 수식을 OCR 할 수 있다.\n\n\n\n\n\n\n\n\n오일러 항등식(Euler’s Identity): \\(e^{i \\pi}+1=0\\)\n\n피타고라스 정리(The Pythagorean Theorem): \\(a^2+b^2=c^2\\)\n\n가우스 적분(The Gaussian Integral): \\(\\int_{-\\infty}^{\\infty} e^{-x^2} d x=\\sqrt{\\pi}\\)\n\n\n\n\n\n3.2.1 R API\n\\[\\int _ { - \\infty } ^ { \\infty } e ^ { - x ^ { 2 } } d x = \\sqrt { \\pi }\\]"
+  },
+  {
+    "objectID": "markdown.html#표-table",
+    "href": "markdown.html#표-table",
+    "title": "챗GPT 데이터 사이언스",
+    "section": "\n3.3 표 (Table)",
+    "text": "3.3 표 (Table)"
   }
 ]
