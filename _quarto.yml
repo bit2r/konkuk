@@ -45,6 +45,8 @@ website:
         - text: "----------------"
         - href: markdown.qmd
           text: "2주차: 마크다운"
+        - href: api_programming.qmd
+          text: "3주차: API 프로그래밍"
 
     right:
       - icon: github

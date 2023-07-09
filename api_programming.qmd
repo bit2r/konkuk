@@ -1,0 +1,376 @@
+---
+title: "챗GPT 데이터 사이언스"
+subtitle: "3주차: API 프로그래밍"
+description: |
+  데이터 사이언스 JSON 파일과 API 프로그래밍을 학습합니다.
+author:
+  - name: 이광춘
+    url: https://www.linkedin.com/in/kwangchunlee/
+    affiliation: 한국 R 사용자회
+    affiliation-url: https://github.com/bit2r
+title-block-banner: true
+format:
+  html:
+    theme: flatly
+    code-fold: true
+    code-overflow: wrap
+    toc: true
+    toc-depth: 3
+    toc-title: 목차
+    number-sections: true
+    highlight-style: github    
+    self-contained: false
+    default-image-extension: jpg
+filters:
+   - lightbox
+lightbox: auto
+link-citations: true
+knitr:
+  opts_chunk: 
+    message: false
+    warning: false
+    collapse: true
+    echo: true
+    comment: "#>" 
+    R.options:
+      knitr.graphics.auto_pdf: true
+editor_options: 
+  chunk_output_type: console
+---
+
+# 웹 데이터
+
+## `urllib`
+
+[파머 펭귄 데이터셋](https://gist.github.com/slopp/ce3b90b9168f2f921784de84fa445651) 웹주소에서 데이터를 마치 로컬파일 데이터셋을 가져오듯이 동일한 방식으로 가져온다.
+
+```{python}
+from urllib.request import urlretrieve
+import pandas as pd
+
+url = 'https://gist.githubusercontent.com/slopp/ce3b90b9168f2f921784de84fa445651/raw/4ecf3041f0ed4913e7c230758733948bc561f434/penguins.csv'
+
+urlretrieve(url, 'data/penguins.csv')
+
+# Read file into a DataFrame and print its head
+penguins_df = pd.read_csv('data/penguins.csv', sep=',')
+print(penguins_df.head())
+```
+
+## `requests`
+
+`requests`는 Python에서 HTTP 요청을 보내는 작업을 단순화하고, 사용자 친화적으로 만든 패키지다. GET, POST, DELETE, PUT 등의 다양한 HTTP 메소드를 사용하여 웹 서버와 통신할 수 있고, `requests`는 JSON 응답을 쉽게 파싱하고, 쿠키를 유지하며, 파일 업로드, HTTP 헤더 조작, SSL 인증 등의 복잡한 작업을 쉽게 처리할 수 있다.
+
+`urllib`는 Python의 표준 라이브러리 중 하나지만, 사용법이 다소 복잡하고 번거로운데 반해, `requests`는 인터페이스가 간결하고 직관적이어서 같은 작업을 더 쉽게 수행할 수 있다.
+
+::: panel-tabset
+### `requests`
+
+```{python}
+#| eval: false
+#| echo: true
+
+import requests
+
+response = requests.get('https://r2bit.com')
+
+print(response.status_code)
+print(response.text)
+```
+
+### `urllib`
+
+```{python}
+#| eval: false
+#| echo: true
+
+from urllib.request import urlopen
+response = urlopen('https://r2bit.com')
+
+print(response.getcode())
+print(response.read())
+```
+:::
+
+## `BeautifulSoup`
+
+`BeautifulSoup`은 Python에서 HTML과 XML 문서를 파싱하기 위한 라이브러리다. 웹 스크래핑 작업에서 특히 유용하며, 복잡하고 잘 정돈되지 않은 웹 페이지에서 데이터를 쉽게 추출할 수 있다.
+
+`BeautifulSoup`은 문서를 트리 구조로 파싱하고, 이 트리를 통해 원하는 정보를 찾고, 수정하고, 네비게이트 할 수 있다. 예를 들어, HTML 문서에서 특정 태그를 찾거나, 특정 클래스 또는 ID를 가진 요소를 검색할 수 있다.
+
+`requests`와 `BeautifulSoup`는 웹 스크래핑 작업에서 함께 사용되는 경우가 많다. 일반적으로 `requests`를 사용하여 웹페이지의 HTML을 가져오고, 그런 다음 `BeautifulSoup`을 사용하여 가져온 HTML을 파싱하고 원하는 정보를 추출하는 방식이다.
+
+::: panel-tabset
+### 웹사이트 제목
+
+```{python}
+import requests
+from bs4 import BeautifulSoup
+
+url = 'https://r2bit.com'
+
+r = requests.get(url)
+
+html_doc = r.text
+
+soup = BeautifulSoup(html_doc)
+
+# pretty_soup = soup.prettify()
+r2bit_title = soup.title
+
+print(r2bit_title)
+```
+
+### 링크
+
+```{python}
+a_tags = soup.find_all('a')
+
+for link in a_tags:
+    print(link.get('href'))
+```
+:::
+
+# JSON 파일
+
+JSON(Javascript Object Notation, 자바스크립트 객체 표기법)은 가장 흔한 일반적인 웹 데이터 형식으로 데이터를 저장하거나 전송할 때 많이 사용되는 가벼운 자료형으로, 사람이 읽고 쓰기 쉬우며, 기계가 파싱하고 생성하기도 쉽다.
+
+-   언어 독립성: JSON은 JavaScript에서 파생되었지만, 거의 모든 프로그래밍 언어는 JSON 데이터를 파싱하는 라이브러리를 가지고 있고, 다양한 언어로 작성된 시스템 간에 데이터를 교환하는 데 아주 유용하게 작용한다.
+-   데이터 구조: JSON은 데이터를 구조화하는 방법도 제공하여 Nested JSON을 통해 중첩된 키-값 쌍을 통해 복잡한 데이터 구조를 표현할 수 있다.
+-   웹 표준: JSON은 웹 애플리케이션에서 서버와 클라이언트 사이의 데이터를 교환하는 표준으로 AJAX(Asynchronous JavaScript And XML)와 같은 기술이 이 형식을 기반으로 동작한다.
+-   읽기 쉬움: JSON 형식은 사람이 읽기 쉽기 때문에 디버깅을 도울 뿐만 아니라, 데이터를 보다 쉽게 이해하고 수정할 수 있다는 장점이 있다.
+
+## 예제
+
+```{r}
+library(tidyverse)
+
+dataframe_df <- tribble(~"Name", ~"Age",
+                        "Alice", 25,
+                        "Bob", 30,
+                        "Charlie", 35)
+
+gt::gt(dataframe_df)
+```
+
+6가지 JSON 파일 표현방법
+
+-   record: 각 레코드가 사전인 목록.
+-   column: 키가 열 레이블인 중첩 딕셔너리.
+-   split: 인덱스, 열, 데이터가 포함된 딕셔너리.
+-   index: 키가 인덱스 레이블인 중첩 딕셔너리.
+-   values: 그냥 값 배열.
+-   table: 스키마와 데이터를 포함하는 중첩된 딕셔너리(Apache Arrow 형식과 상호 운용성을 목표로 하는 더 복잡한 형식).
+
+::: panel-tabset
+### record
+
+``` bash
+[
+    {"Name": "Alice", "Age": 25},
+    {"Name": "Bob", "Age": 30},
+    {"Name": "Charlie", "Age": 35}
+]
+```
+
+### column
+
+``` bash
+{
+    "Name": {"0": "Alice", "1": "Bob", "2": "Charlie"},
+    "Age": {"0": 25, "1": 30, "2": 35}
+}
+```
+
+### split
+
+``` bash
+{
+    "columns": ["Name", "Age"],
+    "index": [0, 1, 2],
+    "data": [["Alice", 25], ["Bob", 30], ["Charlie", 35]]
+}
+```
+
+### index
+
+``` bash
+{
+    "0": {"Name": "Alice", "Age": 25},
+    "1": {"Name": "Bob", "Age": 30},
+    "2": {"Name": "Charlie", "Age": 35}
+}
+```
+
+### values
+
+``` bash
+[
+    ["Alice", 25],
+    ["Bob", 30],
+    ["Charlie", 35]
+]
+```
+
+### table
+
+``` bash
+{
+    "schema": {
+        "fields": [
+            {"name": "index", "type": "integer"},
+            {"name": "Name", "type": "string"},
+            {"name": "Age", "type": "integer"}
+        ],
+        "primaryKey": ["index"],
+        "pandas_version": "0.20.0"
+    },
+    "data": [
+        {"index": 0, "Name": "Alice", "Age": 25},
+        {"index": 1, "Name": "Bob", "Age": 30},
+        {"index": 2, "Name": "Charlie", "Age": 35}
+    ]
+}
+```
+:::
+
+## JSON 불러오기
+
+다양한 형식으로 데이터프레임 파일을 저장했다면 다음 단계로 이를 파이썬에서 불러오는 방식은 `json` 패키지를 사용한다.
+
+```{python}
+import json
+
+with open("data/json.json") as json_file:
+    json_data = json.load(json_file)
+
+for item in json_data:
+    if isinstance(item, dict):  # Check if the item is a dictionary
+        for k in item.keys():
+            print(k + ': ', item[k])
+    
+```
+
+## pandas 불러오기
+
+```{python}
+import pandas as pd
+
+json_pd = pd.read_json("data/json.json")
+
+print(json_pd.describe())
+```
+
+# API
+
+**API("Application Programming Interface)**는 서로 다른 소프트웨어 시스템 간에 상호작용하는 방법을 정의한 것으로 API를 통해 함수, 클래스, 프로토콜, 데이터 구조 등을 포함할 수 있다.
+
+API의 주요 목적은 소프트웨어 개발을 단순화하고 표준화하는 것으로, API를 사용하면 개발자가 특정 기능을 처음부터 새롭게 개발할 필요 없이 이미 개발된 기능을 재사용할 수 있어, API를 통해 서로 다른 시스템 간의 상호작용을 가능하게 하므로, 시스템 간의 통합을 단순화시킬 수 있다.
+
+웹 API는 일반적으로 HTTP를 통해 통신하며, 이를 통해 웹 서버에서 데이터를 요청하거나 웹 서버에 데이터를 보낼 수 있다. 이러한 웹 API를 통해 개발자는 웹 사이트, 애플리케이션, 서비스 등에서 다른 서비스의 기능이나 데이터를 활용할 수 있다. 예를 들어, 소셜 미디어 사이트의 API를 사용하면 개발자는 사용자가 해당 사이트에서 직접 게시물을 공유하거나 댓글을 작성하는 등의 기능을 자신의 애플리케이션에 통합할 수 있다. 이렇게 API를 사용하면 개발자는 기존의 플랫폼과 서비스에서 제공하는 기능과 데이터를 활용하여 새로운 애플리케이션을 더 빠르고 효과적으로 구축할 수 있다.
+
+## OMDB API
+
+[OMDb API - The Open Movie Database](https://www.omdbapi.com/)에서 영화 API에 대한 다양한 정보를 얻을 수 있다.
+
+::: panel-tabset
+
+### API 사양서
+
+[OMDb API - The Open Movie Database](https://www.omdbapi.com/)
+
+### API 시험
+
+![](images/gui_squid_game.jpg){fig-align="center" width="1003"}
+
+### 직접 호출
+
+![](images/api_squid_game.jpg){fig-align="center" width="689"}
+
+### R API 호출
+
+```{r}
+library(httr)
+library(tidyverse)
+
+squid_game_req <- glue::glue("http://www.omdbapi.com/",
+           "?i={Sys.getenv('OMDB_API_ID')}",
+           "&apikey={Sys.getenv('OMDB_API_KEY')}",
+           "&t=squid+game")
+
+squid_resp <- GET(squid_game_req)
+
+jsonlite::fromJSON(content(squid_resp, "text")) %>% 
+  enframe() %>% 
+  mutate(value = map_chr(value, 1))
+```
+
+### 파이썬 API 호출
+
+``` bash
+import requests
+
+url = 'http://www.omdbapi.com/?i=ttxxxxx&apikey=47xxxx&t=squid+game'
+
+r = requests.get(url)
+print(r.text)
+
+{"Title":"Squid Game","Year":"2021–","Rated":"TV-MA","Released":"17 Sep 2021","Runtime":"N/A","Genre":"Action, Drama, Mystery","Director":"N/A","Writer":"N/A","Actors":"Lee Jung-jae, Park Hae-soo, Yasushi Iwaki","Plot":"Hundreds of cash-strapped players accept a strange invitation to compete in children's games. Inside, a tempting prize awaits with deadly high stakes. A survival game that has a whopping 45.6 billion-won prize at stake.","Language":"Korean, English, Urdu","Country":"South Korea","Awards":"Won 6 Primetime Emmys. 46 wins & 80 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BYWE3MDVkN2EtNjQ5MS00ZDQ4LTliNzYtMjc2YWMzMDEwMTA3XkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"8.0/10"}],"Metascore":"N/A","imdbRating":"8.0","imdbVotes":"482,476","imdbID":"tt10919420","Type":"series","totalSeasons":"1","Response":"True"}
+```
+
+``` bash
+json_data = r.json()
+
+# Print each key-value pair in json_data
+for k in json_data.keys():
+    print(k + ': ', json_data[k])
+    
+Title:  Squid Game
+Year:  2021–
+Rated:  TV-MA
+Released:  17 Sep 2021
+Runtime:  N/A
+Genre:  Action, Drama, Mystery
+Director:  N/A
+Writer:  N/A
+Actors:  Lee Jung-jae, Park Hae-soo, Yasushi Iwaki
+Plot:  Hundreds of cash-strapped players accept a strange invitation to compete in children's games. Inside, a tempting prize awaits with deadly high stakes. A survival game that has a whopping 45.6 billion-won prize at stake.
+Language:  Korean, English, Urdu
+Country:  South Korea
+Awards:  Won 6 Primetime Emmys. 46 wins & 80 nominations total
+Poster:  https://m.media-amazon.com/images/M/MV5BYWE3MDVkN2EtNjQ5MS00ZDQ4LTliNzYtMjc2YWMzMDEwMTA3XkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_SX300.jpg
+Ratings:  [{'Source': 'Internet Movie Database', 'Value': '8.0/10'}]
+Metascore:  N/A
+imdbRating:  8.0
+imdbVotes:  482,476
+imdbID:  tt10919420
+Type:  series
+totalSeasons:  1
+Response:  True
+```
+
+### 보안강화
+
+```{python}
+import requests
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+api_key = os.getenv('OMDB_API_KEY')
+i = os.getenv('OMDB_API_ID')
+url = f'http://www.omdbapi.com/?i={i}&apikey={api_key}&t=squid+game'
+
+r = requests.get(url)
+print(r.text)
+```
+
+### `.env`
+
+``` bash
+OMDB_API_KEY=47xxxx
+OMDB_API_ID=ttxxxxx
+```
+
+:::
