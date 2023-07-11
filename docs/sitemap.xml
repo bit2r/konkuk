@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://r2bit.com/konkuk/index.html</loc>
-    <lastmod>2023-07-09T03:05:01.420Z</lastmod>
+    <lastmod>2023-07-11T05:06:56.017Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/konkuk/markdown.html</loc>
@@ -11,5 +11,13 @@
   <url>
     <loc>https://r2bit.com/konkuk/api_programming.html</loc>
     <lastmod>2023-07-09T03:05:17.276Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/konkuk/ds_grammar.html</loc>
+    <lastmod>2023-07-11T05:07:21.015Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/konkuk/git_github.html</loc>
+    <lastmod>2023-07-11T05:07:32.030Z</lastmod>
   </url>
 </urlset>

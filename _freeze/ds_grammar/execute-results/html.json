@@ -1,0 +1,14 @@
+{
+  "hash": "70fcc17056ec6d171668517e63b07759",
+  "result": {
+    "markdown": "---\ntitle: \"챗GPT 데이터 사이언스\"\nsubtitle: \"5주차: Data/Graph/Table 문법\"\ndescription: |\n  데이터, 그래프, 표 문법을 학습합니다.\nauthor:\n  - name: 이광춘\n    url: https://www.linkedin.com/in/kwangchunlee/\n    affiliation: 한국 R 사용자회\n    affiliation-url: https://github.com/bit2r\ntitle-block-banner: true\nformat:\n  html:\n    theme: flatly\n    code-fold: true\n    code-overflow: wrap\n    toc: true\n    toc-depth: 3\n    toc-title: 목차\n    number-sections: true\n    highlight-style: github    \n    self-contained: false\n    default-image-extension: jpg\nfilters:\n   - lightbox\nlightbox: auto\nlink-citations: true\nknitr:\n  opts_chunk: \n    message: false\n    warning: false\n    collapse: true\n    echo: true\n    comment: \"#>\" \n    R.options:\n      knitr.graphics.auto_pdf: true\neditor_options: \n  chunk_output_type: console\n---\n\n\n# 데이터 문법\n\n- [dplyr](https://statkclee.github.io/data-science/)\n\n# 그래프 문법\n\n- [ggplot2](https://statkclee.github.io/viz/)\n\n# 표 문법\n\n- [`gt`](https://statkclee.github.io/data-science/)\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

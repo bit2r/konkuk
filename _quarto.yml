@@ -12,7 +12,7 @@ lang: ko
 date-format: "YYYY년 MM월 DD일"
 
 website:
-  title: "chatGPT"
+  title: "챗GPT"
   site-url: https://r2bit.com/konkuk/
   page-navigation: true
   reader-mode: true
@@ -47,6 +47,10 @@ website:
           text: "2주차: 마크다운"
         - href: api_programming.qmd
           text: "3주차: API 프로그래밍"
+        - href: git_github.qmd
+          text: "4주차: 버전 제어(Git/GitHub)"
+        - href: ds_grammar.qmd
+          text: "5주차: Data/Graph/Table 문법"
 
     right:
       - icon: github
