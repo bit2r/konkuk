@@ -60,8 +60,6 @@ website:
       - icon: github
         text: "RTutor"
         href: https://rtutor.ai/
-      - text: "About"
-        href: about.qmd
   page-footer:
     center: |
       [한국 R 사용자회](mailto:admin@r2bit.com)
