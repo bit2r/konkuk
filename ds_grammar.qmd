@@ -38,6 +38,10 @@ editor_options:
   chunk_output_type: console
 ---
 
+# 데이터프레임
+
+- [펭귄 데이터셋](https://r2bit.com/chatGPT/palmer_penguins.html)
+
 # 데이터 문법
 
 - [dplyr](https://statkclee.github.io/data-science/)

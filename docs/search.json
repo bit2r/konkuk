@@ -473,7 +473,7 @@
     "href": "ds_grammar.html",
     "title": "챗GPT 데이터 사이언스",
     "section": "",
-    "text": "1 데이터 문법\n\ndplyr\n\n2 그래프 문법\n\nggplot2\n\n3 표 문법\n\ngt"
+    "text": "1 데이터프레임\n\n펭귄 데이터셋\n\n2 데이터 문법\n\ndplyr\n\n3 그래프 문법\n\nggplot2\n\n4 표 문법\n\ngt"
   },
   {
     "objectID": "ds_grammar.html#urllib",

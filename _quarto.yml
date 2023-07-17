@@ -45,12 +45,18 @@ website:
         - text: "----------------"
         - href: markdown.qmd
           text: "2주차: 마크다운"
-        - href: api_programming.qmd
-          text: "3주차: API 프로그래밍"
-        - href: git_github.qmd
-          text: "4주차: 버전 제어(Git/GitHub)"
         - href: ds_grammar.qmd
-          text: "5주차: Data/Graph/Table 문법"
+          text: "3주차: Data/Graph/Table 문법"
+        - href: api_programming.qmd
+          text: "4주차: API 프로그래밍"
+        - href: git_github.qmd
+          text: "5주차: 버전 제어(Git/GitHub)"
+        - href: openai.qmd
+          text: "~~6주차: 챗GPT API~~"
+        - href: ds_product.qmd
+          text: "~~7주차: 대쉬보드 & 보고서~~"
+        - href: ai_product.qmd
+          text: "~~8주차: 챗GPT 데이터 사이언스~~"
 
     right:
       - icon: github
